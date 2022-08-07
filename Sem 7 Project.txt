@@ -1,0 +1,9 @@
+FUNCTIONAL REQUIREMENT
+
+Login / Registeration 
+Player Statistics
+Manage Profile
+Tournament Manage
+Manage Match 
+News
+Manage Score

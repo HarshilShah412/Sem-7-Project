@@ -1,0 +1,57 @@
+Registeration:
+	Registeration_id
+	Name
+	Age
+	Email
+	Contact No
+	Password
+	City
+	State
+	Address
+	Pincode
+	Status
+	Role
+	Profile Image
+	
+Add_Tournament:
+	Tournament_id
+	Venue
+	Start Date
+	End Date
+	Tournament Name
+	Tournament Image
+	Status
+	
+Tbl_Player:
+	Player_id
+	Registeration_id[F.K(Registeration)]
+	Player Role
+
+Add_Team:
+	Team_id
+	Team Name
+	Team Image
+	Player_id[F.K(Tbl_Player)]
+
+Add_Match:
+	Match_id
+	Match Type
+	No. of Overs
+	Venue[F.K(Add_Tournament)]
+	Date
+	Time
+	Ball Type
+	
+Start_Match:
+	Runs(0,1,2,3,4,6,Wide,No Ball,LegBy)
+	Extras
+	Over
+	Wicket
+	Total_Score
+	Players Runs
+
+Score:
+	Score_id
+	Player_id[F.K(Tbl_Player)]
+	Match_id[F.K(Add_Match)]
+	SMatch_id[F.K(Start_Match)]
