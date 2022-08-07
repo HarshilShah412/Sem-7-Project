@@ -20,6 +20,8 @@ Add_Tournament:
 	End Date
 	Tournament Name
 	Tournament Image
+	Ball Type
+	Match Type
 	Status
 	
 Tbl_Player:
@@ -35,14 +37,14 @@ Add_Team:
 
 Add_Match:
 	Match_id
-	Match Type
 	No. of Overs
 	Venue[F.K(Add_Tournament)]
 	Date
 	Time
-	Ball Type
 	
 Start_Match:
+	Player_id[F.K(Tbl_Player)]
+	Match_id[F.K(Add_Match)]
 	Runs(0,1,2,3,4,6,Wide,No Ball,LegBy)
 	Extras
 	Over
@@ -52,6 +54,4 @@ Start_Match:
 
 Score:
 	Score_id
-	Player_id[F.K(Tbl_Player)]
-	Match_id[F.K(Add_Match)]
 	SMatch_id[F.K(Start_Match)]
